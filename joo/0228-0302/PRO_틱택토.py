@@ -1,3 +1,6 @@
+# programmers 연습문제 - 혼자서 하는 틱택토
+# https://school.programmers.co.kr/learn/courses/30/lessons/160585
+
 
 # 실수를 했을 가능성이 있는가 X, 규칙을 지켜서 진행한 틱택토에서 나올 수 있는 상황인가 O
 def solution(board):
