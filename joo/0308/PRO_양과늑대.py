@@ -1,4 +1,4 @@
-# programmers 2022 kakao blind recruitment - 양과 늑대
+# programmers 2022 kakao blind recruitment - 양과늑대
 # https://school.programmers.co.kr/learn/courses/30/lessons/92343
 
 def dfs(cur, visited, sheep, wolf, k, dic, info, track):
