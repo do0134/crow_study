@@ -18,9 +18,11 @@ def solution(key, lock):
                 lock_idxs.append([i, j])
     print(key_idxs, lock_idxs)
 
+    # 시계방향
     def clockwise(x, y, w):
         return [y, abs(x - (w - 1))]
 
+    # 반시계방향
     def counterclockwise(x, y, w):
         return [abs(y - (w - 1)), x]
 
