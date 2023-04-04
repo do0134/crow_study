@@ -41,8 +41,5 @@ while heap:
         for i in lancable[s]:
             heapq.heappush(heap, i)
 
-# dasom_lan = 0
-# for c in dasom:
-#     dasom_lan += change(c)
 print(total - dasom + 1 if flag else -1)
 
