@@ -1,9 +1,5 @@
-# def DFS(n1):
-#     global parent1, parent2
-#     if n1 == 0:
-#         return
-#     DFS(arr[n1], arr[n2])
-
+# BOJ 3584 가까운 조상 찾기
+# https://www.acmicpc.net/problem/3584
 
 T = int(input())
 for _ in range(T):
