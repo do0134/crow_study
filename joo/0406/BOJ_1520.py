@@ -26,7 +26,6 @@ def DFS(x, y):
 M, N = map(int, sys.stdin.readline().split())
 arr = [list(map(int, sys.stdin.readline().split())) for _ in range(M)]
 dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
-answer = 0
 dp = [[-1] * N for _ in range(M)]
 
 print(DFS(0, 0))
