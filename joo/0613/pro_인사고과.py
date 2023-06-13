@@ -2,8 +2,8 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/152995
 
 def solution(scores):
-    answer = 0
-    members = []
+    # answer = 0
+    # members = []
     #     # 모든 사원의 점수를 비교해서 둘 다 낮은 점수를 가진 사원은 빼기
     #     for i in range(len(scores)):
     #         now = scores[i][0] + scores[i][1]
@@ -26,24 +26,38 @@ def solution(scores):
     #         for mi in members:
     #             if wonho < scores[mi][0] + scores[mi][1]:
     #                 answer += 1
+    #
 
+
+    # wonho = scores[0]
+    # scores.sort(key=lambda x: -(x[0] + x[1]))
+    # here = 0
+    # for i in range(len(scores)):
+    #     if scores[i] == wonho:
+    #         here = i
+    #         break
+    # scores = scores[:here + 1]
+    # for i in range(len(scores)):
+    #     for j in range(i):
+    #         if scores[i][0] < scores[j][0] and scores[i][1] < scores[j][1]:
+    #             if wonho == scores[i]:
+    #                 answer = -1
+    #             break
+    #     else:
+    #         answer += 1
+    #     if answer == -1:
+    #         break
+
+    answer = 1
     wonho = scores[0]
-    scores.sort(key=lambda x: -(x[0] + x[1]))
-    here = 0
-    for i in range(len(scores)):
-        if scores[i] == wonho:
-            here = i
-            break
-    scores = scores[:here + 1]
-    for i in range(len(scores)):
-        for j in range(i):
-            if scores[i][0] < scores[j][0] and scores[i][1] < scores[j][1]:
-                if wonho == scores[i]:
-                    answer = -1
-                break
-        else:
-            answer += 1
-        if answer == -1:
-            break
-
+    wonho_score = scores[0][0] + scores[0][1]
+    scores.sort(key=lambda x: (-x[0], x[1]))
+    now = 0
+    for score in scores:
+        if wonho[0] < score[0] and wonho[1] < score[1]:
+            return -1
+        if now <= score[1]:
+            if score[0] + score[1] > wonho_score:
+                answer += 1
+            now = score[1]
     return answer
